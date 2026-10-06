@@ -1,0 +1,633 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#071b45">
+<meta name="description" content="Album video kegiatan dan profil SD Kristen 04 Eben Haezer Salatiga.">
+<title>SD Kristen 04 yang Terbaik — Album Video</title>
+<style>
+:root {
+  --navy:#071b45; --blue:#0c3d91; --cyan:#22b8f0; --gold:#f5c451;
+  --bg:#f5f8fc; --ink:#10213f; --muted:#64748b; --card:#fff;
+  --line:#e4eaf2; --shadow:0 16px 40px rgba(7,27,69,.10);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;background:var(--bg);color:var(--ink)}
+a{color:inherit}
+.hero{position:relative;overflow:hidden;background:
+  radial-gradient(circle at 80% 10%,rgba(34,184,240,.35),transparent 30%),
+  radial-gradient(circle at 10% 90%,rgba(245,196,81,.18),transparent 28%),
+  linear-gradient(135deg,#061638,#0c3d91 62%,#1162b8);color:white}
+.hero::after{content:"";position:absolute;inset:0;opacity:.14;background-image:linear-gradient(120deg,transparent 0 45%,#fff 45.5% 46%,transparent 46.5% 100%);background-size:44px 44px}
+.hero-inner{position:relative;z-index:1;max-width:1180px;margin:auto;padding:58px 22px 52px}
+.logo-row{display:flex;align-items:center;gap:14px;margin-bottom:22px}
+.logo{width:105px;height:105px;display:grid;place-items:center;flex:0 0 auto;overflow:visible}.logo img{width:100%;height:100%;object-fit:contain;display:block}
+.eyebrow{font-size:12px;letter-spacing:.18em;text-transform:uppercase;font-weight:800;opacity:.82}
+h1{font-size:clamp(34px,6vw,68px);line-height:1.02;margin:0 0 6px;letter-spacing:-.045em}
+.tagline{font-size:clamp(19px,2.7vw,30px);line-height:1.2;font-style:italic;font-weight:700;margin:0 0 18px;color:#f5c451}.subtitle{max-width:850px;font-size:clamp(16px,2.1vw,22px);line-height:1.5;margin:0;color:#e8f3ff}
+.hero-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px}
+.hero-btn{border:1px solid #ffffff33;background:#ffffff15;color:white;text-decoration:none;padding:12px 17px;border-radius:999px;font-weight:750;backdrop-filter:blur(8px)}
+.hero-btn.primary{background:white;color:var(--navy);border-color:white}
+main{max-width:1180px;margin:auto;padding:34px 22px 70px}
+.toolbar{display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap;margin-bottom:22px}
+.search{flex:1;min-width:230px;position:relative}
+.search input{width:100%;padding:14px 16px 14px 44px;border:1px solid var(--line);border-radius:14px;background:white;font-size:15px;outline:none;box-shadow:0 5px 18px #071b4508}
+.search input:focus{border-color:#7bbde5;box-shadow:0 0 0 4px #22b8f01c}
+.search span{position:absolute;left:15px;top:12px;font-size:20px}
+.filters{display:flex;gap:7px;flex-wrap:wrap}
+.filter{border:1px solid var(--line);background:white;color:var(--muted);padding:10px 12px;border-radius:999px;font-weight:700;cursor:pointer}
+.filter.active{background:var(--navy);color:white;border-color:var(--navy)}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:12px;margin:28px 0 14px}
+.section-head h2{margin:0;font-size:26px;letter-spacing:-.02em}
+.count{color:var(--muted);font-size:14px}
+.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:20px;overflow:hidden;box-shadow:0 8px 26px #071b4509;transition:.22s ease;display:flex;flex-direction:column}
+.card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.thumb{display:block;position:relative;width:100%;padding:0;border:0;background:#0b1830;cursor:pointer;overflow:hidden}
+.thumb.profile{aspect-ratio:16/9}
+.thumb.portrait{aspect-ratio:9/12.7}
+.thumb img{width:100%;height:100%;object-fit:cover;display:block;transition:.25s ease}
+.thumb:hover img{transform:scale(1.03)}
+.thumb::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#0000 50%,#0008 100%);pointer-events:none}
+.play{position:absolute;z-index:2;left:50%;top:50%;transform:translate(-50%,-50%);width:54px;height:54px;border-radius:50%;background:#fff;color:var(--navy);display:grid;place-items:center;box-shadow:0 10px 24px #0006;font-size:19px;padding-left:3px}
+.badge{position:absolute;z-index:2;top:11px;left:11px;background:#071b45dd;color:white;border-radius:999px;padding:5px 8px;font-size:10px;font-weight:900;letter-spacing:.08em}
+.fallback-icon{display:none;position:absolute;inset:0;place-items:center;color:white;font-size:40px}
+.thumb-fallback .fallback-icon{display:grid}
+.card-body{padding:15px 15px 16px;display:flex;flex-direction:column;flex:1}
+.card-kicker{font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:#6b7b93;font-weight:800;margin-bottom:6px}
+.card h3{font-size:17px;line-height:1.25;margin:0 0 14px;letter-spacing:-.015em}
+.card-actions{margin-top:auto;display:flex;align-items:center;gap:10px}
+.watch{border:0;background:var(--navy);color:white;border-radius:10px;padding:10px 12px;font-weight:800;cursor:pointer;flex:1}
+.card-actions a{font-size:12px;font-weight:800;color:#527099;text-decoration:none}
+.empty{display:none;padding:35px;text-align:center;background:white;border:1px dashed #cbd5e1;border-radius:18px;color:var(--muted)}
+footer{background:#061638;color:#cbd8ed;padding:28px 22px;text-align:center;font-size:13px}
+footer strong{color:white}
+.modal{position:fixed;inset:0;background:#020814eF;z-index:50;display:none;align-items:center;justify-content:center;padding:18px}
+.modal.open{display:flex}
+.modal-box{width:min(1080px,100%);max-height:96vh;display:flex;flex-direction:column;background:#07101f;border:1px solid #ffffff1c;border-radius:18px;overflow:hidden;box-shadow:0 25px 90px #000b}
+.modal-top{display:flex;align-items:center;justify-content:space-between;gap:12px;color:white;padding:11px 14px;background:#0b1830}
+.modal-title{font-weight:800;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.close{border:0;background:#ffffff14;color:white;width:38px;height:38px;border-radius:10px;font-size:22px;cursor:pointer}
+.player-wrap{background:#02050a;display:flex;align-items:center;justify-content:center;overflow:auto;min-height:320px}
+.player-wrap.portrait{height:min(78vh,820px)}
+.player-wrap.profile{aspect-ratio:16/9;max-height:80vh}
+.player-wrap iframe{border:0;width:100%;height:100%;display:block}
+.player-wrap.portrait iframe{width:min(100%,460px);height:100%}
+.player-wrap.profile iframe{width:100%;height:100%}
+.modal-note{font-size:12px;color:#aebbd0;padding:9px 14px;background:#07101f}
+@media(max-width:980px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:700px){.hero-inner{padding:42px 18px 38px}main{padding:25px 16px 55px}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.card{border-radius:16px}.card-body{padding:12px}.card h3{font-size:15px}.card-actions a{display:none}}
+@media(max-width:430px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.thumb.portrait{aspect-ratio:9/12}.play{width:46px;height:46px;font-size:16px}.hero-actions{display:grid;grid-template-columns:1fr}.hero-btn{text-align:center}.logo{width:88px;height:88px}.logo img{width:100%;height:100%}.logo-row{gap:11px}}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="hero-inner">
+    <div class="logo-row">
+      <div class="logo"><img src="assets/logo-sdk04.png" alt="Logo SD Kristen 04 Eben Haezer Salatiga"></div>
+      <div><div class="eyebrow">Album Video Sekolah</div><div style="font-weight:800">SD Kristen 04 Eben Haezer Salatiga</div></div>
+    </div>
+    <h1>SD Kristen 04 Eben Haezer</h1>
+    <p class="tagline">yang Terbaik</p>
+    <p class="subtitle">Ayo pilih kegiatan Ekstrakurikuler, yang sesuai bakat dan minatmu, wujudkan mimpi dan raih Prestasimu</p>
+    <div class="hero-actions">
+      <a class="hero-btn primary" href="#koleksi">Jelajahi Koleksi Video ↓</a>
+      <a class="hero-btn" href="#profil">Tonton Profil Sekolah</a>
+    </div>
+  </div>
+</header>
+
+<main id="koleksi">
+  <div class="toolbar">
+    <div class="search"><span>⌕</span><input id="search" type="search" placeholder="Cari kegiatan, misalnya Catur atau Coding…"></div>
+    <div class="filters" role="tablist" aria-label="Filter video">
+      <button class="filter active" data-filter="all">Semua</button>
+      <button class="filter" data-filter="sport">Olahraga</button>
+      <button class="filter" data-filter="seni">Seni & Budaya</button>
+      <button class="filter" data-filter="akademik">Akademik</button>
+      <button class="filter" data-filter="teknologi">Teknologi</button>
+      <button class="filter" data-filter="bahasa">Bahasa</button>
+      <button class="filter" data-filter="karakter">Karakter</button>
+    </div>
+  </div>
+
+  <section id="profil">
+    <div class="section-head"><h2>Profil Sekolah</h2><div class="count">1 video • Landscape 16:9</div></div>
+    <div class="grid">
+      <article class="card" data-title="profile sekolah sdk04 eben haezer salatiga 2026" data-category="profile">
+        <button class="thumb profile" type="button"
+          onclick="openPlayer('1_6M2EwwMUiOTCxgOv-krlEOjjxUCmufv', 'Profile Sekolah SDK04 Eben Haezer Salatiga 2026', 'profile')"
+          aria-label="Putar Profile Sekolah SDK04 Eben Haezer Salatiga 2026">
+          <img src="https://drive.google.com/thumbnail?id=1_6M2EwwMUiOTCxgOv-krlEOjjxUCmufv&sz=w1200" alt="Thumbnail Profile Sekolah SDK04 Eben Haezer Salatiga 2026" loading="lazy"
+               onerror="this.style.display='none';this.parentElement.classList.add('thumb-fallback')">
+          <span class="fallback-icon">▶</span>
+          <span class="play"><span>▶</span></span>
+          <span class="badge">PROFILE</span>
+        </button>
+        <div class="card-body">
+          <div class="card-kicker">Profil sekolah • Landscape 16:9</div>
+          <h3>Profile Sekolah SDK04 Eben Haezer Salatiga 2026</h3>
+          <div class="card-actions">
+            <button class="watch" onclick="openPlayer('1_6M2EwwMUiOTCxgOv-krlEOjjxUCmufv', 'Profile Sekolah SDK04 Eben Haezer Salatiga 2026', 'profile')">▶ Putar Video</button>
+            <a href="https://drive.google.com/file/d/1_6M2EwwMUiOTCxgOv-krlEOjjxUCmufv/view?usp=sharing" target="_blank" rel="noopener">Drive ↗</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head"><h2>Pilih Ekstrakurikuler</h2><div class="count"><span id="visibleCount">22</span> video • Portrait 9:16</div></div>
+    <div class="grid" id="videoGrid">
+      <article class="card" data-title="ekstrakurikuler badminton" data-category="sport">
+        <button class="thumb portrait" type="button"
+          onclick="openPlayer('1PLYVD9x3jO6CUKbpm7zQpQ8vFEWqM3zp', 'Ekstrakurikuler Badminton', 'portrait')"
+          aria-label="Putar Ekstrakurikuler Badminton">
+          <img src="https://drive.google.com/thumbnail?id=1PLYVD9x3jO6CUKbpm7zQpQ8vFEWqM3zp&sz=w1200" alt="Thumbnail Ekstrakurikuler Badminton" loading="lazy"
+               onerror="this.style.display='none';this.parentElement.classList.add('thumb-fallback')">
+          <span class="fallback-icon">▶</span>
+          <span class="play"><span>▶</span></span>
+          <span class="badge">EKSTRA</span>
+        </button>
+        <div class="card-body">
+          <div class="card-kicker">Olahraga • Portrait 9:16</div>
+          <h3>Ekstrakurikuler Badminton</h3>
+          <div class="card-actions">
+            <button class="watch" onclick="openPlayer('1PLYVD9x3jO6CUKbpm7zQpQ8vFEWqM3zp', 'Ekstrakurikuler Badminton', 'portrait')">▶ Putar Video</button>
+            <a href="https://drive.google.com/file/d/1PLYVD9x3jO6CUKbpm7zQpQ8vFEWqM3zp/view?usp=sharing" target="_blank" rel="noopener">Drive ↗</a>
+          </div>
+        </div>
+      </article>
+    
+      <article class="card" data-title="ekstrakurikuler barongsai" data-category="seni">
+        <button class="thumb portrait" type="button"
+          onclick="openPlayer('1lfX8UPy9P_icy1hHzGXlCAQnBDWodHrw', 'Ekstrakurikuler Barongsai', 'portrait')"
+          aria-label="Putar Ekstrakurikuler Barongsai">
+          <img src="https://drive.google.com/thumbnail?id=1lfX8UPy9P_icy1hHzGXlCAQnBDWodHrw&sz=w1200" alt="Thumbnail Ekstrakurikuler Barongsai" loading="lazy"
+               onerror="this.style.display='none';this.parentElement.classList.add('thumb-fallback')">
+          <span class="fallback-icon">▶</span>
+          <span class="play"><span>▶</span></span>
+          <span class="badge">EKSTRA</span>
+        </button>
+        <div class="card-body">
+          <div class="card-kicker">Seni & Budaya • Portrait 9:16</div>
+          <h3>Ekstrakurikuler Barongsai</h3>
+          <div class="card-actions">
+            <button class="watch" onclick="openPlayer('1lfX8UPy9P_icy1hHzGXlCAQnBDWodHrw', 'Ekstrakurikuler Barongsai', 'portrait')">▶ Putar Video</button>
+            <a href="https://drive.google.com/file/d/1lfX8UPy9P_icy1hHzGXlCAQnBDWodHrw/view?usp=sharing" target="_blank" rel="noopener">Drive ↗</a>
+          </div>
+        </div>
+      </article>
+    
+      <article class="card" data-title="ekstrakurikuler basa jawa" data-category="bahasa">
+        <button class="thumb portrait" type="button"
+          onclick="openPlayer('1j5I2_8YDMxUq5cu0EZ_9ain5Cb00GpVS', 'Ekstrakurikuler Basa Jawa', 'portrait')"
+          aria-label="Putar Ekstrakurikuler Basa Jawa">
+          <img src="https://drive.google.com/thumbnail?id=1j5I2_8YDMxUq5cu0EZ_9ain5Cb00GpVS&sz=w1200" alt="Thumbnail Ekstrakurikuler Basa Jawa" loading="lazy"
+               onerror="this.style.display='none';this.parentElement.classList.add('thumb-fallback')">
+          <span class="fallback-icon">▶</span>
+          <span class="play"><span>▶</span></span>
+          <span class="badge">EKSTRA</span>
+        </button>
+        <div class="card-body">
+          <div class="card-kicker">Bahasa & Budaya • Portrait 9:16</div>
+          <h3>Ekstrakurikuler Basa Jawa</h3>
+          <div class="card-actions">
+            <button class="watch" onclick="openPlayer('1j5I2_8YDMxUq5cu0EZ_9ain5Cb00GpVS', 'Ekstrakurikuler Basa Jawa', 'portrait')">▶ Putar Video</button>
+            <a href="https://drive.google.com/file/d/1j5I2_8YDMxUq5cu0EZ_9ain5Cb00GpVS/view?usp=sharing" target="_blank" rel="noopener">Drive ↗</a>
+          </div>
+        </div>
+      </article>
+    
+      <article class="card" data-title="ekstrakurikuler bilingual math to mandarin" data-category="akademik">
+        <button class="thumb portrait" type="button"
+          onclick="openPlayer('19ZG9dsqF14QfZoPQe_O1DuXfSs6t_eua', 'Ekstrakurikuler Bilingual Math to Mandarin', 'portrait')"
+          aria-label="Putar Ekstrakurikuler Bilingual Math to Mandarin">
+          <img src="https://drive.google.com/thumbnail?id=19ZG9dsqF14QfZoPQe_O1DuXfSs6t_eua&sz=w1200" alt="Thumbnail Ekstrakurikuler Bilingual Math to Mandarin" loading="lazy"
+               onerror="this.style.display='none';this.parentElement.classList.add('thumb-fallback')">
+          <span class="fallback-icon">▶</span>
+          <span class="play"><span>▶</span></span>
+          <span class="badge">EKSTRA</span>
+        </button>
+        <div class="card-body">
+          <div class="card-kicker">Akademik & Bahasa • Portrait 9:16</div>
+          <h3>Ekstrakurikuler Bilingual Math to Mandarin</h3>
+          <div class="card-actions">
+            <button class="watch" onclick="openPlayer('19ZG9dsqF14QfZoPQe_O1DuXfSs6t_eua', 'Ekstrakurikuler Bilingual Math to Mandarin', 'portrait')">▶ Putar Video</button>
+            <a href="https://drive.google.com/file/d/19ZG9dsqF14QfZoPQe_O1DuXfSs6t_eua/view?usp=sharing" target="_blank" rel="noopener">Drive ↗</a>
+          </div>
+        </div>
+      </article>
+    
+      <article class="card" data-title="ekstrakurikuler catur" data-category="akademik">
+        <button class="thumb portrait" type="button"
+          onclick="openPlayer('1QL0tb7ioiNFru3rQGlZlvxn4Wn2rpRcv', 'Ekstrakurikuler Catur', 'portrait')"
+          aria-label="Putar Ekstrakurikuler Catur">
+          <img src="https://drive.google.com/thumbnail?id=1QL0tb7ioiNFru3rQGlZlvxn4Wn2rpRcv&sz=w1200" alt="Thumbnail Ekstrakurikuler Catur" loading="lazy"
+               onerror="this.style.display='none';this.parentElement.classList.add('thumb-fallback')">
+          <span class="fallback-icon">▶</span>
+          <span class="play"><span>▶</span></span>
+          <span class="badge">EKSTRA</span>
+        </button>
+        <div class="card-body">
+          <div class="card-kicker">Strategi & Logika • Portrait 9:16</div>
+          <h3>Ekstrakurikuler Catur</h3>
+          <div class="card-actions">
+            <button class="watch" onclick="openPlayer('1QL0tb7ioiNFru3rQGlZlvxn4Wn2rpRcv', 'Ekstrakurikuler Catur', 'portrait')">▶ Putar Video</button>
+            <a href="https://drive.google.com/file/d/1QL0tb7ioiNFru3rQGlZlvxn4Wn2rpRcv/view?usp=sharing" target="_blank" rel="noopener">Drive ↗</a>
+          </div>
+        </div>
+      </article>
+    
+      <article class="card" data-title="ekstrakurikuler coding" data-category="teknologi">
+        <button class="thumb portrait" type="button"
+          onclick="openPlayer('1dYtiI8H0m843oInTFIjLKM8KNIPxbxIG', 'Ekstrakurikuler Coding', 'portrait')"
+          aria-label="Putar Ekstrakurikuler Coding">
+          <img src="https://drive.google.com/thumbnail?id=1dYtiI8H0m843oInTFIjLKM8KNIPxbxIG&sz=w1200" alt="Thumbnail Ekstrakurikuler Coding" loading="lazy"
+               onerror="this.style.display='none';this.parentElement.classList.add('thumb-fallback')">
+          <span class="fallback-icon">▶</span>
+          <span class="play"><span>▶</span></span>
+          <span class="badge">EKSTRA</span>
+        </button>
+        <div class="card-body">
+          <div class="card-kicker">Teknologi • Portrait 9:16</div>
+          <h3>Ekstrakurikuler Coding</h3>
+          <div class="card-actions">
+            <button class="watch" onclick="openPlayer('1dYtiI8H0m843oInTFIjLKM8KNIPxbxIG', 'Ekstrakurikuler Coding', 'portrait')">▶ Putar Video</button>
+            <a href="https://drive.google.com/file/d/1dYtiI8H0m843oInTFIjLKM8KNIPxbxIG/view?usp=sharing" target="_blank" rel="noopener">Drive ↗</a>
+          </div>
+        </div>
+      </article>
+    
+      <article class="card" data-title="ekstrakurikuler drumband" data-category="seni">
+        <button class="thumb portrait" type="button"
+          onclick="openPlayer('1xKa_KJLChNF98vRHg48vOORq0OLlZkDF', 'Ekstrakurikuler Drumband', 'portrait')"
+          aria-label="Putar Ekstrakurikuler Drumband">
+          <img src="https://drive.google.com/thumbnail?id=1xKa_KJLChNF98vRHg48vOORq0OLlZkDF&sz=w1200" alt="Thumbnail Ekstrakurikuler Drumband" loading="lazy"
+               onerror="this.style.display='none';this.parentElement.classList.add('thumb-fallback')">
+          <span class="fallback-icon">▶</span>
+          <span class="play"><span>▶</span></span>
+          <span class="badge">EKSTRA</span>
+        </button>
+        <div class="card-body">
+          <div class="card-kicker">Seni Musik • Portrait 9:16</div>
+          <h3>Ekstrakurikuler Drumband</h3>
+          <div class="card-actions">
+            <button class="watch" onclick="openPlayer('1xKa_KJLChNF98vRHg48vOORq0OLlZkDF', 'Ekstrakurikuler Drumband', 'portrait')">▶ Putar Video</button>
+            <a href="https://drive.google.com/file/d/1xKa_KJLChNF98vRHg48vOORq0OLlZkDF/view?usp=sharing" target="_blank" rel="noopener">Drive ↗</a>
+          </div>
+        </div>
+      </article>
+    
+      <article class="card" data-title="ekstrakurikuler english club" data-category="bahasa">
+        <button class="thumb portrait" type="button"
+          onclick="openPlayer('163Pgixrn0hc29PZH5j1mVEk0VCel_f0A', 'Ekstrakurikuler English Club', 'portrait')"
+          aria-label="Putar Ekstrakurikuler English Club">
+          <img src="https://drive.google.com/thumbnail?id=163Pgixrn0hc29PZH5j1mVEk0VCel_f0A&sz=w1200" alt="Thumbnail Ekstrakurikuler English Club" loading="lazy"
+               onerror="this.style.display='none';this.parentElement.classList.add('thumb-fallback')">
+          <span class="fallback-icon">▶</span>
+          <span class="play"><span>▶</span></span>
+          <span class="badge">EKSTRA</span>
+        </button>
+        <div class="card-body">
+          <div class="card-kicker">Bahasa • Portrait 9:16</div>
+          <h3>Ekstrakurikuler English Club</h3>
+          <div class="card-actions">
+            <button class="watch" onclick="openPlayer('163Pgixrn0hc29PZH5j1mVEk0VCel_f0A', 'Ekstrakurikuler English Club', 'portrait')">▶ Putar Video</button>
+            <a href="https://drive.google.com/file/d/163Pgixrn0hc29PZH5j1mVEk0VCel_f0A/view?usp=sharing" target="_blank" rel="noopener">Drive ↗</a>
+          </div>
+        </div>
+      </article>
+    
+      <article class="card" data-title="ekstrakurikuler ensambel" data-category="seni">
+        <button class="thumb portrait" type="button"
+          onclick="openPlayer('1E_mH-dYumllEXBBycnM_e5atuYRZc0gY', 'Ekstrakurikuler Ensambel', 'portrait')"
+          aria-label="Putar Ekstrakurikuler Ensambel">
+          <img src="https://drive.google.com/thumbnail?id=1E_mH-dYumllEXBBycnM_e5atuYRZc0gY&sz=w1200" alt="Thumbnail Ekstrakurikuler Ensambel" loading="lazy"
+               onerror="this.style.display='none';this.parentElement.classList.add('thumb-fallback')">
+          <span class="fallback-icon">▶</span>
+          <span class="play"><span>▶</span></span>
+          <span class="badge">EKSTRA</span>
+        </button>
+        <div class="card-body">
+          <div class="card-kicker">Seni Musik • Portrait 9:16</div>
+          <h3>Ekstrakurikuler Ensambel</h3>
+          <div class="card-actions">
+            <button class="watch" onclick="openPlayer('1E_mH-dYumllEXBBycnM_e5atuYRZc0gY', 'Ekstrakurikuler Ensambel', 'portrait')">▶ Putar Video</button>
+            <a href="https://drive.google.com/file/d/1E_mH-dYumllEXBBycnM_e5atuYRZc0gY/view?usp=sharing" target="_blank" rel="noopener">Drive ↗</a>
+          </div>
+        </div>
+      </article>
+    
+      <article class="card" data-title="ekstrakurikuler futsal" data-category="sport">
+        <button class="thumb portrait" type="button"
+          onclick="openPlayer('1ffCzLYxBuZghLuaijOwXaoZsEqS0_Ktu', 'Ekstrakurikuler Futsal', 'portrait')"
+          aria-label="Putar Ekstrakurikuler Futsal">
+          <img src="https://drive.google.com/thumbnail?id=1ffCzLYxBuZghLuaijOwXaoZsEqS0_Ktu&sz=w1200" alt="Thumbnail Ekstrakurikuler Futsal" loading="lazy"
+               onerror="this.style.display='none';this.parentElement.classList.add('thumb-fallback')">
+          <span class="fallback-icon">▶</span>
+          <span class="play"><span>▶</span></span>
+          <span class="badge">EKSTRA</span>
+        </button>
+        <div class="card-body">
+          <div class="card-kicker">Olahraga • Portrait 9:16</div>
+          <h3>Ekstrakurikuler Futsal</h3>
+          <div class="card-actions">
+            <button class="watch" onclick="openPlayer('1ffCzLYxBuZghLuaijOwXaoZsEqS0_Ktu', 'Ekstrakurikuler Futsal', 'portrait')">▶ Putar Video</button>
+            <a href="https://drive.google.com/file/d/1ffCzLYxBuZghLuaijOwXaoZsEqS0_Ktu/view?usp=sharing" target="_blank" rel="noopener">Drive ↗</a>
+          </div>
+        </div>
+      </article>
+    
+      <article class="card" data-title="ekstrakurikuler karawitan" data-category="seni">
+        <button class="thumb portrait" type="button"
+          onclick="openPlayer('1W8UzjW1AerCy5iOxb_BcPGQLzrCMVEde', 'Ekstrakurikuler Karawitan', 'portrait')"
+          aria-label="Putar Ekstrakurikuler Karawitan">
+          <img src="https://drive.google.com/thumbnail?id=1W8UzjW1AerCy5iOxb_BcPGQLzrCMVEde&sz=w1200" alt="Thumbnail Ekstrakurikuler Karawitan" loading="lazy"
+               onerror="this.style.display='none';this.parentElement.classList.add('thumb-fallback')">
+          <span class="fallback-icon">▶</span>
+          <span class="play"><span>▶</span></span>
+          <span class="badge">EKSTRA</span>
+        </button>
+        <div class="card-body">
+          <div class="card-kicker">Seni & Budaya • Portrait 9:16</div>
+          <h3>Ekstrakurikuler Karawitan</h3>
+          <div class="card-actions">
+            <button class="watch" onclick="openPlayer('1W8UzjW1AerCy5iOxb_BcPGQLzrCMVEde', 'Ekstrakurikuler Karawitan', 'portrait')">▶ Putar Video</button>
+            <a href="https://drive.google.com/file/d/1W8UzjW1AerCy5iOxb_BcPGQLzrCMVEde/view?usp=sharing" target="_blank" rel="noopener">Drive ↗</a>
+          </div>
+        </div>
+      </article>
+    
+      <article class="card" data-title="ekstrakurikuler math club" data-category="akademik">
+        <button class="thumb portrait" type="button"
+          onclick="openPlayer('1xCWLbjZfPzNSDiTwjmR_SJbc_Ldtvvmq', 'Ekstrakurikuler Math Club', 'portrait')"
+          aria-label="Putar Ekstrakurikuler Math Club">
+          <img src="https://drive.google.com/thumbnail?id=1xCWLbjZfPzNSDiTwjmR_SJbc_Ldtvvmq&sz=w1200" alt="Thumbnail Ekstrakurikuler Math Club" loading="lazy"
+               onerror="this.style.display='none';this.parentElement.classList.add('thumb-fallback')">
+          <span class="fallback-icon">▶</span>
+          <span class="play"><span>▶</span></span>
+          <span class="badge">EKSTRA</span>
+        </button>
+        <div class="card-body">
+          <div class="card-kicker">Akademik • Portrait 9:16</div>
+          <h3>Ekstrakurikuler Math Club</h3>
+          <div class="card-actions">
+            <button class="watch" onclick="openPlayer('1xCWLbjZfPzNSDiTwjmR_SJbc_Ldtvvmq', 'Ekstrakurikuler Math Club', 'portrait')">▶ Putar Video</button>
+            <a href="https://drive.google.com/file/d/1xCWLbjZfPzNSDiTwjmR_SJbc_Ldtvvmq/view?usp=sharing" target="_blank" rel="noopener">Drive ↗</a>
+          </div>
+        </div>
+      </article>
+    
+      <article class="card" data-title="ekstrakurikuler mewarnai" data-category="seni">
+        <button class="thumb portrait" type="button"
+          onclick="openPlayer('1UoL774joX1SiWXc8T86nHhooplOAimVx', 'Ekstrakurikuler Mewarnai', 'portrait')"
+          aria-label="Putar Ekstrakurikuler Mewarnai">
+          <img src="https://drive.google.com/thumbnail?id=1UoL774joX1SiWXc8T86nHhooplOAimVx&sz=w1200" alt="Thumbnail Ekstrakurikuler Mewarnai" loading="lazy"
+               onerror="this.style.display='none';this.parentElement.classList.add('thumb-fallback')">
+          <span class="fallback-icon">▶</span>
+          <span class="play"><span>▶</span></span>
+          <span class="badge">EKSTRA</span>
+        </button>
+        <div class="card-body">
+          <div class="card-kicker">Seni Kreatif • Portrait 9:16</div>
+          <h3>Ekstrakurikuler Mewarnai</h3>
+          <div class="card-actions">
+            <button class="watch" onclick="openPlayer('1UoL774joX1SiWXc8T86nHhooplOAimVx', 'Ekstrakurikuler Mewarnai', 'portrait')">▶ Putar Video</button>
+            <a href="https://drive.google.com/file/d/1UoL774joX1SiWXc8T86nHhooplOAimVx/view?usp=sharing" target="_blank" rel="noopener">Drive ↗</a>
+          </div>
+        </div>
+      </article>
+    
+      <article class="card" data-title="ekstrakurikuler modern dance" data-category="seni">
+        <button class="thumb portrait" type="button"
+          onclick="openPlayer('1z7vwxEm3Swgf_SKpMnmcZaUEtvuSYkO3', 'Ekstrakurikuler Modern Dance', 'portrait')"
+          aria-label="Putar Ekstrakurikuler Modern Dance">
+          <img src="https://drive.google.com/thumbnail?id=1z7vwxEm3Swgf_SKpMnmcZaUEtvuSYkO3&sz=w1200" alt="Thumbnail Ekstrakurikuler Modern Dance" loading="lazy"
+               onerror="this.style.display='none';this.parentElement.classList.add('thumb-fallback')">
+          <span class="fallback-icon">▶</span>
+          <span class="play"><span>▶</span></span>
+          <span class="badge">EKSTRA</span>
+        </button>
+        <div class="card-body">
+          <div class="card-kicker">Seni Tari • Portrait 9:16</div>
+          <h3>Ekstrakurikuler Modern Dance</h3>
+          <div class="card-actions">
+            <button class="watch" onclick="openPlayer('1z7vwxEm3Swgf_SKpMnmcZaUEtvuSYkO3', 'Ekstrakurikuler Modern Dance', 'portrait')">▶ Putar Video</button>
+            <a href="https://drive.google.com/file/d/1z7vwxEm3Swgf_SKpMnmcZaUEtvuSYkO3/view?usp=sharing" target="_blank" rel="noopener">Drive ↗</a>
+          </div>
+        </div>
+      </article>
+    
+      <article class="card" data-title="ekstrakurikuler paduan suara" data-category="seni">
+        <button class="thumb portrait" type="button"
+          onclick="openPlayer('1cHJL3Nvuobibi8ocKOtLxLIBihxqbC-W', 'Ekstrakurikuler Paduan Suara', 'portrait')"
+          aria-label="Putar Ekstrakurikuler Paduan Suara">
+          <img src="https://drive.google.com/thumbnail?id=1cHJL3Nvuobibi8ocKOtLxLIBihxqbC-W&sz=w1200" alt="Thumbnail Ekstrakurikuler Paduan Suara" loading="lazy"
+               onerror="this.style.display='none';this.parentElement.classList.add('thumb-fallback')">
+          <span class="fallback-icon">▶</span>
+          <span class="play"><span>▶</span></span>
+          <span class="badge">EKSTRA</span>
+        </button>
+        <div class="card-body">
+          <div class="card-kicker">Seni Musik • Portrait 9:16</div>
+          <h3>Ekstrakurikuler Paduan Suara</h3>
+          <div class="card-actions">
+            <button class="watch" onclick="openPlayer('1cHJL3Nvuobibi8ocKOtLxLIBihxqbC-W', 'Ekstrakurikuler Paduan Suara', 'portrait')">▶ Putar Video</button>
+            <a href="https://drive.google.com/file/d/1cHJL3Nvuobibi8ocKOtLxLIBihxqbC-W/view?usp=sharing" target="_blank" rel="noopener">Drive ↗</a>
+          </div>
+        </div>
+      </article>
+    
+      <article class="card" data-title="ekstrakurikuler pramuka" data-category="karakter">
+        <button class="thumb portrait" type="button"
+          onclick="openPlayer('19aH70JmTWGsB152F0TEluo06nQWW9TcI', 'Ekstrakurikuler Pramuka', 'portrait')"
+          aria-label="Putar Ekstrakurikuler Pramuka">
+          <img src="https://drive.google.com/thumbnail?id=19aH70JmTWGsB152F0TEluo06nQWW9TcI&sz=w1200" alt="Thumbnail Ekstrakurikuler Pramuka" loading="lazy"
+               onerror="this.style.display='none';this.parentElement.classList.add('thumb-fallback')">
+          <span class="fallback-icon">▶</span>
+          <span class="play"><span>▶</span></span>
+          <span class="badge">EKSTRA</span>
+        </button>
+        <div class="card-body">
+          <div class="card-kicker">Karakter & Kemandirian • Portrait 9:16</div>
+          <h3>Ekstrakurikuler Pramuka</h3>
+          <div class="card-actions">
+            <button class="watch" onclick="openPlayer('19aH70JmTWGsB152F0TEluo06nQWW9TcI', 'Ekstrakurikuler Pramuka', 'portrait')">▶ Putar Video</button>
+            <a href="https://drive.google.com/file/d/19aH70JmTWGsB152F0TEluo06nQWW9TcI/view?usp=sharing" target="_blank" rel="noopener">Drive ↗</a>
+          </div>
+        </div>
+      </article>
+    
+      <article class="card" data-title="ekstrakurikuler renang" data-category="sport">
+        <button class="thumb portrait" type="button"
+          onclick="openPlayer('1xWzjnxFklZgvnX5yhOuEtzZ7DW6OL0kK', 'Ekstrakurikuler Renang', 'portrait')"
+          aria-label="Putar Ekstrakurikuler Renang">
+          <img src="https://drive.google.com/thumbnail?id=1xWzjnxFklZgvnX5yhOuEtzZ7DW6OL0kK&sz=w1200" alt="Thumbnail Ekstrakurikuler Renang" loading="lazy"
+               onerror="this.style.display='none';this.parentElement.classList.add('thumb-fallback')">
+          <span class="fallback-icon">▶</span>
+          <span class="play"><span>▶</span></span>
+          <span class="badge">EKSTRA</span>
+        </button>
+        <div class="card-body">
+          <div class="card-kicker">Olahraga • Portrait 9:16</div>
+          <h3>Ekstrakurikuler Renang</h3>
+          <div class="card-actions">
+            <button class="watch" onclick="openPlayer('1xWzjnxFklZgvnX5yhOuEtzZ7DW6OL0kK', 'Ekstrakurikuler Renang', 'portrait')">▶ Putar Video</button>
+            <a href="https://drive.google.com/file/d/1xWzjnxFklZgvnX5yhOuEtzZ7DW6OL0kK/view?usp=sharing" target="_blank" rel="noopener">Drive ↗</a>
+          </div>
+        </div>
+      </article>
+    
+      <article class="card" data-title="ekstrakurikuler robotic" data-category="teknologi">
+        <button class="thumb portrait" type="button"
+          onclick="openPlayer('1ldYTgq4tmBIn9tvIlnNhSto-Tds8uRE7', 'Ekstrakurikuler Robotic', 'portrait')"
+          aria-label="Putar Ekstrakurikuler Robotic">
+          <img src="https://drive.google.com/thumbnail?id=1ldYTgq4tmBIn9tvIlnNhSto-Tds8uRE7&sz=w1200" alt="Thumbnail Ekstrakurikuler Robotic" loading="lazy"
+               onerror="this.style.display='none';this.parentElement.classList.add('thumb-fallback')">
+          <span class="fallback-icon">▶</span>
+          <span class="play"><span>▶</span></span>
+          <span class="badge">EKSTRA</span>
+        </button>
+        <div class="card-body">
+          <div class="card-kicker">Teknologi • Portrait 9:16</div>
+          <h3>Ekstrakurikuler Robotic</h3>
+          <div class="card-actions">
+            <button class="watch" onclick="openPlayer('1ldYTgq4tmBIn9tvIlnNhSto-Tds8uRE7', 'Ekstrakurikuler Robotic', 'portrait')">▶ Putar Video</button>
+            <a href="https://drive.google.com/file/d/1ldYTgq4tmBIn9tvIlnNhSto-Tds8uRE7/view?usp=sharing" target="_blank" rel="noopener">Drive ↗</a>
+          </div>
+        </div>
+      </article>
+    
+      <article class="card" data-title="ekstrakurikuler science club" data-category="akademik">
+        <button class="thumb portrait" type="button"
+          onclick="openPlayer('1YkPb3fotAScO5vOfXvMxzLYe3edcFNeY', 'Ekstrakurikuler Science Club', 'portrait')"
+          aria-label="Putar Ekstrakurikuler Science Club">
+          <img src="https://drive.google.com/thumbnail?id=1YkPb3fotAScO5vOfXvMxzLYe3edcFNeY&sz=w1200" alt="Thumbnail Ekstrakurikuler Science Club" loading="lazy"
+               onerror="this.style.display='none';this.parentElement.classList.add('thumb-fallback')">
+          <span class="fallback-icon">▶</span>
+          <span class="play"><span>▶</span></span>
+          <span class="badge">EKSTRA</span>
+        </button>
+        <div class="card-body">
+          <div class="card-kicker">Sains • Portrait 9:16</div>
+          <h3>Ekstrakurikuler Science Club</h3>
+          <div class="card-actions">
+            <button class="watch" onclick="openPlayer('1YkPb3fotAScO5vOfXvMxzLYe3edcFNeY', 'Ekstrakurikuler Science Club', 'portrait')">▶ Putar Video</button>
+            <a href="https://drive.google.com/file/d/1YkPb3fotAScO5vOfXvMxzLYe3edcFNeY/view?usp=sharing" target="_blank" rel="noopener">Drive ↗</a>
+          </div>
+        </div>
+      </article>
+    
+      <article class="card" data-title="ekstrakurikuler taekwondo" data-category="sport">
+        <button class="thumb portrait" type="button"
+          onclick="openPlayer('1VnqSle17W71s9b_IMoLnMyUS-nF-pTNF', 'Ekstrakurikuler Taekwondo', 'portrait')"
+          aria-label="Putar Ekstrakurikuler Taekwondo">
+          <img src="https://drive.google.com/thumbnail?id=1VnqSle17W71s9b_IMoLnMyUS-nF-pTNF&sz=w1200" alt="Thumbnail Ekstrakurikuler Taekwondo" loading="lazy"
+               onerror="this.style.display='none';this.parentElement.classList.add('thumb-fallback')">
+          <span class="fallback-icon">▶</span>
+          <span class="play"><span>▶</span></span>
+          <span class="badge">EKSTRA</span>
+        </button>
+        <div class="card-body">
+          <div class="card-kicker">Olahraga • Portrait 9:16</div>
+          <h3>Ekstrakurikuler Taekwondo</h3>
+          <div class="card-actions">
+            <button class="watch" onclick="openPlayer('1VnqSle17W71s9b_IMoLnMyUS-nF-pTNF', 'Ekstrakurikuler Taekwondo', 'portrait')">▶ Putar Video</button>
+            <a href="https://drive.google.com/file/d/1VnqSle17W71s9b_IMoLnMyUS-nF-pTNF/view?usp=sharing" target="_blank" rel="noopener">Drive ↗</a>
+          </div>
+        </div>
+      </article>
+    
+      <article class="card" data-title="ekstrakurikuler tari kreasi" data-category="seni">
+        <button class="thumb portrait" type="button"
+          onclick="openPlayer('19OolU8JqP9frzRsV-VCLCORuYIe0GlX1', 'Ekstrakurikuler Tari Kreasi', 'portrait')"
+          aria-label="Putar Ekstrakurikuler Tari Kreasi">
+          <img src="https://drive.google.com/thumbnail?id=19OolU8JqP9frzRsV-VCLCORuYIe0GlX1&sz=w1200" alt="Thumbnail Ekstrakurikuler Tari Kreasi" loading="lazy"
+               onerror="this.style.display='none';this.parentElement.classList.add('thumb-fallback')">
+          <span class="fallback-icon">▶</span>
+          <span class="play"><span>▶</span></span>
+          <span class="badge">EKSTRA</span>
+        </button>
+        <div class="card-body">
+          <div class="card-kicker">Seni Tari • Portrait 9:16</div>
+          <h3>Ekstrakurikuler Tari Kreasi</h3>
+          <div class="card-actions">
+            <button class="watch" onclick="openPlayer('19OolU8JqP9frzRsV-VCLCORuYIe0GlX1', 'Ekstrakurikuler Tari Kreasi', 'portrait')">▶ Putar Video</button>
+            <a href="https://drive.google.com/file/d/19OolU8JqP9frzRsV-VCLCORuYIe0GlX1/view?usp=sharing" target="_blank" rel="noopener">Drive ↗</a>
+          </div>
+        </div>
+      </article>
+    
+      <article class="card" data-title="ekstrakurikuler ycc" data-category="karakter">
+        <button class="thumb portrait" type="button"
+          onclick="openPlayer('1pNGlxXlpqmK6UkSEU2Zkgq2RyaoFIG-m', 'Ekstrakurikuler YCC', 'portrait')"
+          aria-label="Putar Ekstrakurikuler YCC">
+          <img src="https://drive.google.com/thumbnail?id=1pNGlxXlpqmK6UkSEU2Zkgq2RyaoFIG-m&sz=w1200" alt="Thumbnail Ekstrakurikuler YCC" loading="lazy"
+               onerror="this.style.display='none';this.parentElement.classList.add('thumb-fallback')">
+          <span class="fallback-icon">▶</span>
+          <span class="play"><span>▶</span></span>
+          <span class="badge">EKSTRA</span>
+        </button>
+        <div class="card-body">
+          <div class="card-kicker">Pengembangan Diri • Portrait 9:16</div>
+          <h3>Ekstrakurikuler YCC</h3>
+          <div class="card-actions">
+            <button class="watch" onclick="openPlayer('1pNGlxXlpqmK6UkSEU2Zkgq2RyaoFIG-m', 'Ekstrakurikuler YCC', 'portrait')">▶ Putar Video</button>
+            <a href="https://drive.google.com/file/d/1pNGlxXlpqmK6UkSEU2Zkgq2RyaoFIG-m/view?usp=sharing" target="_blank" rel="noopener">Drive ↗</a>
+          </div>
+        </div>
+      </article>
+    </div>
+    <div class="empty" id="empty">Video yang dicari belum ditemukan. Coba kata kunci lain.</div>
+  </section>
+</main>
+
+<footer><strong>SD Kristen 04 Eben Haezer Salatiga</strong><br>Album video kegiatan sekolah • SD Kristen 04 yang Terbaik<br><span style="display:inline-block;margin-top:8px;color:#e8f3ff;font-weight:700">SDK04 Eben Haezer &amp; Lemansasti Photography 2026</span></footer>
+
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-label="Pemutar video">
+  <div class="modal-box">
+    <div class="modal-top"><div class="modal-title" id="modalTitle">Video</div><button class="close" onclick="closePlayer()" aria-label="Tutup">×</button></div>
+    <div class="player-wrap" id="playerWrap"><iframe id="player" allow="autoplay; fullscreen" allowfullscreen></iframe></div>
+    <div class="modal-note">Video diputar melalui Google Drive. Gunakan kontrol pemutar untuk play, pause, volume, dan fullscreen.</div>
+  </div>
+</div>
+
+<script>
+const modal=document.getElementById('modal'), player=document.getElementById('player'), wrap=document.getElementById('playerWrap'), titleEl=document.getElementById('modalTitle');
+function openPlayer(id,title,ratio){
+  titleEl.textContent=title;
+  wrap.className='player-wrap '+(ratio==='profile'?'profile':'portrait');
+  player.src='https://drive.google.com/file/d/'+id+'/preview';
+  modal.classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closePlayer(){
+  modal.classList.remove('open');
+  player.src='';
+  document.body.style.overflow='';
+}
+modal.addEventListener('click',e=>{if(e.target===modal)closePlayer()});
+document.addEventListener('keydown',e=>{if(e.key==='Escape' && modal.classList.contains('open'))closePlayer()});
+
+const search=document.getElementById('search'), cardsEls=[...document.querySelectorAll('#videoGrid .card')], empty=document.getElementById('empty'), count=document.getElementById('visibleCount');
+let active='all';
+function apply(){
+  const q=search.value.trim().toLowerCase();
+  let shown=0;
+  cardsEls.forEach(c=>{
+    const ok=(active==='all'||c.dataset.category===active)&&(!q||c.dataset.title.includes(q));
+    c.style.display=ok?'flex':'none'; if(ok)shown++;
+  });
+  count.textContent=shown; empty.style.display=shown?'none':'block';
+}
+search.addEventListener('input',apply);
+document.querySelectorAll('.filter').forEach(b=>b.addEventListener('click',()=>{
+  document.querySelectorAll('.filter').forEach(x=>x.classList.remove('active'));
+  b.classList.add('active'); active=b.dataset.filter; apply();
+}));
+</script>
+</body>
+</html>
